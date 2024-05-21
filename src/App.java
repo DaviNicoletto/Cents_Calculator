@@ -9,11 +9,11 @@ public class App {
         combinations.clear();
 
         for (int quarters = 0; quarters <= n / 25; quarters++) {
-            for (int nickels = 0; nickels <= n / 10; nickels++) {
-                for (int dimes = 0; dimes <= n / 5; dimes++) {
-                    int pennies = n - (quarters * 25 + nickels * 10 + dimes * 5);
+            for (int dimes = 0; dimes <= n / 10; dimes++) {
+                for (int nickels = 0; nickels <= n / 5; nickels++) {
+                    int pennies = n - (quarters * 25 + dimes * 10 + nickels * 5);
                     if (pennies >= 0) {
-                        int[] combination = { quarters, nickels, dimes, pennies };
+                        int[] combination = { quarters, dimes, nickels, pennies };
                         combinations.add(combination);
                     }
                 }
